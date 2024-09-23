@@ -1,0 +1,26 @@
+From 3852a0f9f28f125505b00ac6965760bd12395efe Mon Sep 17 00:00:00 2001
+From: Gustavo Branco <guster32@gmail.com>
+Date: Sun, 22 Sep 2024 21:33:11 -0700
+Subject: [PATCH] Set background color to blue
+Upstream-Status: Inappropriate [customization for internal use]
+
+---
+ psplash-colors.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/psplash-colors.h b/psplash-colors.h
+index 82a9893..66930ec 100644
+--- a/psplash-colors.h
++++ b/psplash-colors.h
+@@ -12,7 +12,7 @@
+ #define _HAVE_PSPLASH_COLORS_H
+ 
+ /* This is the overall background color */
+-#define PSPLASH_BACKGROUND_COLOR 0xec,0xec,0xe1
++#define PSPLASH_BACKGROUND_COLOR 0x5f, 0xc9, 0xdc
+ 
+ /* This is the color of any text output */
+ #define PSPLASH_TEXT_COLOR 0x6d,0x6d,0x70
+-- 
+2.46.0
+
