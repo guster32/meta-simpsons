@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable and Start Simpsons User Service for Root
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/su - root -c 'systemctl --user enable simpsons.service && systemctl --user start simpsons.service'
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
