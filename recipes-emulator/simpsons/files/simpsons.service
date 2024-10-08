@@ -5,6 +5,7 @@ Description=Konami Simpsons ROM Autostart with tinywl
 ExecStart=/usr/bin/tinywl -s "konami /root/roms/simpsons.zip"
 Restart=on-failure
 Environment="XDG_RUNTIME_DIR=/run/user/%U"
+Nice=-19
 
 [Install]
 WantedBy=default.target

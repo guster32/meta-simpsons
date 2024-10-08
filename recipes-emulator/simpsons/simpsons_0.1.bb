@@ -6,6 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 # file://simpsons.zip;unpack=false
 SRC_URI = "file://enable-simpsons.service \
     file://simpsons.service \
+    file://daemon.conf \
     file://default.cfg \
     file://simpsons.cfg \
     file://mame.ini \
@@ -22,6 +23,9 @@ do_install() {
 
     install -m 0644 ${S}/mame.ini ${D}/root/mame.ini
     install -m 0644 ${S}/ui.ini ${D}/root/ui.ini
+
+    install -d ${D}/root/.config/pulse/
+    install -m 0644 ${S}/daemon.conf ${D}/root/.config/pulse/daemon.conf
 
     install -d ${D}/root/cfg/
     install -m 0644 ${S}/default.cfg ${D}/root/cfg/default.cfg
@@ -40,5 +44,5 @@ SYSTEMD_SERVICE:${PN} = "enable-simpsons.service"
 SYSTEMD_AUTO_ENABLE = "enable"
 
 FILES:${PN} += "/usr/lib/systemd/user/simpsons.service /usr/lib/systemd/system/enable-simpsons.service"
-FILES:${PN} += "/root /root/mame.ini /root/ui.ini /root/roms /root/cfg /root/cfg/default.cfg /root/cfg/simpsons.cfg"
+FILES:${PN} += "/root /root/mame.ini /root/ui.ini /root/roms /root/.config/pulse /root/.config/pulse/daemon.conf /root/cfg /root/cfg/default.cfg /root/cfg/simpsons.cfg"
 

@@ -8,6 +8,7 @@ INHERIT:append = " buildhistory package package-index "
 IMAGE_INSTALL:append:qemuall=" libgles1-mesa-dev libgles2-mesa-dev libgles3-mesa-dev "
 
 IMAGE_INSTALL:append=" \
+  htop \
   simpsons"
 
 COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|odroid-m1s"
