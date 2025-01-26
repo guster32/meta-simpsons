@@ -11,5 +11,5 @@ IMAGE_INSTALL:append=" \
   htop \
   simpsons"
 
-COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|odroid-m1s"
+COMPATIBLE_MACHINE = "odroid-xu4|qemuarm|qemux86-64|odroid-m1s|radxa-zero3w"
 
